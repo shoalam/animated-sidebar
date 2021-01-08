@@ -1,0 +1,173 @@
+
+/************ General Styling ************/
+*{
+	margin: 0;
+	padding: 0;
+}
+
+ul, li{
+	list-style-type: none;
+}
+
+a, a:hover{
+	text-decoration: none;
+}
+
+/******** Body Styling **********/
+body{
+	background: url(img/banner.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	font-family: 'Roboto', sans-serif;
+	font-size: 18px;
+	height: 100vh;
+	color: #fff;
+	position: relative;
+	z-index: 1;
+}
+
+body::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: -1;
+}
+/******** Sidebar Styling **********/
+
+.content-container{
+	width: 250px;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	right: -250px;
+	transition: 0.4s;
+}
+
+.hamburger{
+	display: inline-block;
+	cursor: pointer;
+	position: fixed;
+	right: 100px;
+	top: 20px; 
+}
+
+.hamburger .line{
+	width: 35px;
+	height: 3px;
+	display: block;
+	margin-bottom: 8px;
+	background: #fff;
+	transition: .4s;
+}
+
+.change{
+	right: 0;
+}
+.change .line1{
+  transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.change .line2{
+  opacity: 0;
+}
+
+.change .line3{
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+nav ul li{
+	list-style-type: none;
+	margin-bottom: 30px;
+}
+
+nav ul li a{
+	padding: 10px 0;
+	text-decoration: none;
+	color: #fff;
+	transition: 0.4s;
+	position: relative;
+}
+
+nav ul li a::before,
+nav ul li a::after{
+	content: "";
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background-color: #eece1a;
+	transition: 0.4s;
+	transform: scaleX(0);
+	
+}
+nav ul li a::before{
+	top: 0;
+	transform-origin: left;
+}
+
+nav ul li a::after{
+	bottom: 0;
+	transform-origin: right;
+}
+nav ul li a:hover:before,
+nav ul li a:hover:after{
+	transform: scaleX(1);  
+}
+
+.social-links{
+	margin-top: 50px;
+}
+
+.social-links a .fa{
+	margin-right: 20px;
+	color: #fff;
+	transform: scaleX(1);
+	transition: 0.4s;
+}
+
+.social-links a .fa:hover{
+	color: #eece1a;
+	transform: scaleX(1.25);
+	transition: 0.4s;
+}
+/********Sidenav Styling End********/
+
+/******** Hero Section Styling ********/
+.hero-section{
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/********* Responsive Styling ********/
+
+@media(max-width: 767px){
+	nav ul li{
+		margin-bottom: 20px;
+	}
+
+	.social-links{
+		margin-top: 30px;
+	}
+
+}
+
+@media(max-width: 575px){
+	.hero-section h1{
+		font-size: 16px;
+	}
+}

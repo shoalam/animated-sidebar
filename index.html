@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Responsive Animated Sidebar</title>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<!-- Sidebar -->
+<div class="content-container">
+	<div class="hamburger">
+		<span class="line line1"></span>
+		<span class="line line2"></span>
+		<span class="line line3"></span>
+	</div>
+	<nav>
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Services</a></li>
+			<li><a href="#">Portfolio</a></li>
+			<li><a href="#">Blog</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+	</nav>
+	<div class="social-links">
+		<a href="#"><i class="fa fa-facebook"></i></a>
+		<a href="#"><i class="fa fa-twitter"></i></a>
+		<a href="#"><i class="fa fa-linkedin"></i></a>
+		<a href="#"><i class="fa fa-github"></i></a>
+	</div>
+</div>
+
+<!-- Hero Section -->
+
+<section class="hero-section">
+	<div class="hero-text">
+		<h1>Responsive Animated Sidebar</h1>
+	</div>
+</section>
+
+	<script>
+		const navIcon = document.querySelector('.hamburger');
+		const sideNav = document.querySelector('.content-container');
+
+		navIcon.addEventListener('click', () =>{
+			sideNav.classList.toggle('change');
+		});
+
+		
+
+	</script>
+</body>
+</html>
